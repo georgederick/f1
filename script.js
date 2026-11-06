@@ -186,7 +186,7 @@ init[6] = async () => {
   await sleep(500); await wait('🎙️ TRANSMITIR BOA NOITE'); go(7);
 };
 
-const FL = ['Antes de encerrar o expediente…', 'eu precisava te contar uma coisa:', 'você foi a minha melhor volta rápida do dia.', 'Hoje eu abro mão da pole, da vitória e até do pódio,', 'só pra ter a chance de te desejar uma boa noite.', 'Descansa, sonha bonito, e amanhã a gente retoma a disputa. 🧡'];
+const FL = ['Antes de encerrar o expediente…', 'eu precisava te contar uma coisa:', 'você foi a minha melhor volta rápida do dia.', 'Hoje eu abro mão da pole, da vitória e até do pódio,', 'só pra ter a chance de te desejar uma boa noite.', 'Bom descanso, e amanhã eu apareço pra te pertubar um tekinho maiskkk. 🧡'];
 init[7] = async () => {
   if (init[7].d) return; init[7].d = 1; const fm = $('#fm'); await sleep(900);
   for (const t of FL) { $$('#fm p').forEach(p => p.classList.add('old')); const p = document.createElement('p'); p.textContent = t; fm.appendChild(p); await sleep(60); p.classList.add('on'); tone(520 + Math.random() * 300, .6, 'sine', .05); await sleep(2300); }
