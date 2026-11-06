@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FIA — Federação Internacional dos Apaixonados</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,500;0,700;1,700&family=Parisienne&family=Titillium+Web:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<button id="snd" class="hid" aria-label="som">🔇</button>
+<div class="wipe"></div>
+
+<section class="scr on" id="s1">
+  <div class="speed"></div>
+  <img class="f1" src="assets/f1.png" alt="Formula 1">
+  <div class="teams"><img class="tm" src="assets/mclaren.png" alt="McLaren"><b>VS</b><img class="tf" src="assets/ferrari.png" alt="Ferrari"></div>
+  <div class="lights" id="lights"><i></i><i></i><i></i><i></i><i></i></div>
+  <p class="gp" id="gp">GRANDE PRÊMIO DO BOA NOITE · SPA-FRANCORCHAMPS</p>
+  <div class="row" id="enter"><button class="cta" id="e1">ENTRAR NO PADDOCK 🔊</button><button class="ghost" id="e0">sem som</button></div>
+  <button class="cta hid" id="go1">INICIAR INVESTIGAÇÃO</button>
+  <img class="zoom" src="assets/car-mclaren.png" alt=""><img class="zoom fe" src="assets/car-ferrari.png" alt="">
+</section>
+
+<section class="scr" id="s2">
+  <article class="paper">
+    <header><img class="fia" src="assets/fia.png" alt="FIA"><div><b>FIA</b><small>FEDERAÇÃO INTERNACIONAL DOS APAIXONADOS</small></div><span class="conf">CONFIDENCIAL</span></header>
+    <h2>COMUNICADO OFICIAL Nº 06/11</h2>
+    <h3>Investigação extraordinária envolvendo um piloto da McLaren e uma piloto da Scuderia Ferrari</h3>
+    <p class="meta">Data: 06/11/2026 · Local: Spa-Francorchamps · Comissários de prova: 3</p>
+    <p class="acc" id="acc"></p>
+    <ol id="inf">
+      <li><span class="n">1</span>Excesso de beleza na pista.<em class="stamp">CULPADA</em></li>
+      <li><span class="n">2</span>Condução perigosa de sentimentos.<em class="stamp">CULPADA</em></li>
+      <li><span class="n">3</span>Ultrapassagem indevida da barreira da amizade.<em class="stamp">CULPADA</em></li>
+      <li><span class="n">4</span>Capacidade excessiva de distrair um piloto adversário.<em class="stamp">CULPADA</em></li>
+    </ol>
+    <p class="hint" id="h2">Toque em cada infração para carimbar o processo.</p>
+    <button class="cta" id="go2" disabled>CONVOCAR AS EQUIPES</button>
+  </article>
+</section>
+
+<section class="scr" id="s3">
+  <div class="vs">
+    <div class="side L"><img class="lg" src="assets/mclaren.png" alt="McLaren"><img class="cr" src="assets/car-mclaren.png" alt=""><p class="bub" id="bM">Toque para provocar a Ferrari.</p><button class="pill pm" id="pM">PROVOCAR 🧡</button></div>
+    <div class="mid">VS</div>
+    <div class="side R"><img class="lg sh" src="assets/ferrari.png" alt="Ferrari"><img class="cr fl" src="assets/car-ferrari.png" alt=""><p class="bub" id="bF">A Scuderia aguarda a provocação…</p><button class="pill pf" id="pF">REVIDAR ❤️</button></div>
+  </div>
+  <div class="foot"><p class="stw hid" id="stw"></p><button class="cta" id="go3" disabled>LARGAR! 🏁</button></div>
+</section>
+
+<section class="scr" id="s4">
+  <canvas id="cv"></canvas>
+  <div class="rec">● REC · DRONE CAM 01 · SPA-FRANCORCHAMPS</div>
+  <div class="hud"><div class="lap"><small>VOLTA</small><b id="lap">1</b><span>/3</span></div>
+    <div class="tower"><div class="r" id="r1" style="border-color:#ff8000"><span class="p" id="p1">1</span><img src="assets/mclaren.png" alt=""><span class="g" id="g1">LÍDER</span></div>
+    <div class="r" id="r2" style="border-color:#e8002d"><span class="p" id="p2">2</span><img src="assets/ferrari.png" alt=""><span class="g" id="g2">+0.0</span></div></div></div>
+  <div class="tele"><div>KM/H<b id="spd">0</b></div><div>MARCHA<b id="gear">N</b></div><div class="rpm"><i id="rpm"></i></div></div>
+  <div class="comm" id="comm"></div>
+  <button class="drs" id="drs"><span>DRS</span></button>
+  <div class="cd" id="cd"></div>
+  <div class="photo" id="photo"><b>FOTO FINISH</b><span>EMPATE TÉCNICO · 0.000s</span><small>Os comissários vão precisar analisar este caso…</small><button class="cta hid" id="go4">CHAMAR OS COMISSÁRIOS</button></div>
+</section>
+
+<section class="scr" id="s5">
+  <div class="siren"></div>
+  <img class="fiaw" src="assets/fia.png" alt="FIA">
+  <h2 id="vt">OS COMISSÁRIOS ESTÃO DELIBERANDO…</h2>
+  <div class="count" id="count"></div>
+  <button class="cta" id="go5a">REVELAR O VEREDITO</button>
+  <div class="card hid" id="vc"><small>DECISÃO DOS COMISSÁRIOS</small><p id="vp"></p></div>
+  <button class="cta hid" id="go5">CUMPRIR PENALIDADE</button>
+</section>
+
+<section class="scr" id="s6">
+  <div class="radio" id="radio"><div class="rh"><span class="dot"></span>TEAM RADIO<em>CH 06</em><div class="bars" id="bars"></div></div>
+    <div class="log" id="log"></div><div class="rf"><button class="cta hid" id="ptt"></button></div></div>
+</section>
+
+<section class="scr" id="s7">
+  <canvas id="fc"></canvas>
+  <div class="fm" id="fm"></div>
+  <div class="road" id="road"><img src="assets/car-mclaren.png" alt=""><img src="assets/car-ferrari.png" alt=""></div>
+  <button class="ghost re hid" id="re">↻ rever a corrida</button>
+</section>
+<script src="script.js"></script>
+</body>
+</html>
